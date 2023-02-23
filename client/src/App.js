@@ -1,6 +1,8 @@
 import React from "react";
 import Products from "./Products";
+
 import StripeProductPull from "./StripeProductPull";
+
 
 const App = () => {
 //   const [products, setProducts] = useState([]);
@@ -53,6 +55,7 @@ return (
   <Products />
   <br />
   <StripeProductPull />
+
   </>
   // <>
 )};

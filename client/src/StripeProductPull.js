@@ -1,4 +1,5 @@
 import React, {useState,  useEffect } from "react";
+import StripePricePull from "./StripePricePull";
 // import StripeProduct from "./StripeProduct.json";
 const stripe = require('stripe')('sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8');
 
@@ -7,6 +8,7 @@ const stripe = require('stripe')('sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPE
 
 const StripeProductPull = () => {
 const [products, setProducts] = useState([]);
+// const [price, setPrice] = useState([]);
 // const [stripeProducts, setstripeProducts] = useState([]);
 
 
@@ -48,6 +50,16 @@ useEffect(() => {
   ];
 
 console.log(products);
+
+
+
+// const stripe = require('stripe')('sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8');
+
+// const price = await stripe.prices.retrieve(
+//   'price_1MeSfWCDSrHORaZX9xAtaZsK'
+// );
+
+
 
 //   setstripeProducts(stripeProduct);
 //   console.log(myProfile['title']);
@@ -130,7 +142,7 @@ return (
             <div className="">
               <h2 className="">{stripeProduct.name}</h2>
               <p className="">{stripeProduct.description}</p>
-              <p className="">{stripeProduct.default_price}</p>
+              <StripePricePull />
             </div>
           </li>
           </div>
