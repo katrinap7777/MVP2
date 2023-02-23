@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import FormatPrice from './FormatPrice';
-
 const stripe = require("stripe")(
   "sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8"
 );
