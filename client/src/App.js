@@ -1,6 +1,5 @@
 import React from "react";
 import Products from "./Products";
-
 import StripeProductPull from "./StripeProductPull";
 
 
@@ -54,7 +53,7 @@ return (
   <h1>Splitzanorm</h1>
   <Products />
   <br />
-  <StripeProductPull />
+  <StripeProductPull /> 
 
   </>
   // <>
