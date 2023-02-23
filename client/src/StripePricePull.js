@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import FormatPrice from './FormatPrice';
+
 const stripe = require("stripe")(
   "sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8"
 );
 
 const StripePricePull = () => {
   const [prices, setPrices] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,13 +48,20 @@ const StripePricePull = () => {
     },
   ];
 
+
+  // const productPrice=(FormatPrice(stripePrice.unit_amount));
+  const productPrice=(FormatPrice(7900));
+  console.log(productPrice);
+
+  // console.log(FormatPrice(2665));
+
   return (
     <>
       <ul className="">
         {stripePrice.map((stripePrice) => {
           return (
             <div key={stripePrice.id}>
-              <p>{stripePrice.unit_amount}</p>
+              <p>{productPrice}</p>
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import StripeProductPull from "./StripeProductPull";
+import Header from "./components/Header";
 
 
 const App = () => {
@@ -50,11 +51,12 @@ const App = () => {
 
 return (
   <>
-  <h1>Splitzanorm</h1>
+  <div className="overflow-hidden">
+  <Header />
   <Products />
   <br />
   <StripeProductPull /> 
-
+  </div>
   </>
   // <>
 )};
