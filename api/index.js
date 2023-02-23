@@ -3,6 +3,8 @@ const app = express();
 const cors = require("cors");
 const pool = require("./db");
 
+const Stripe = require('stripe');
+const stripe = Stripe('sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8');
 
 app.use(cors());
 app.use(express.json());
@@ -25,6 +27,19 @@ app.get("/products/:id", async (req, res) => {
         console.error(err.message);
     }
 });
+
+
+// app.get("/products/:id", async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         const product = await pool.query("SELECT * FROM product WHERE id = $1", [id]);       
+//         res.json(product.rows[0]);
+//     } catch (err) {
+//         console.error(err.message);
+//     }
+// });
+
+
 
 // app.get("/products", async (req, res) => {
 //     try {

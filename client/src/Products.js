@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import cloche from "./image/cloche.png";
+// import cloche from "./image/cloche.png";
+
+
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -67,7 +70,7 @@ return (
         <li className="" >
             <div className="img">
               <img
-                src={cloche} 
+                src={product.image} 
                 // src={`./image/${product.image}`}
                 alt={product.description}
                 className="product-image"
