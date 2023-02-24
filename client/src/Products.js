@@ -61,7 +61,7 @@ useEffect(() => {
 //   }) => {
 return (
   <>
-  <h2>Products</h2>
+  <h2 className="subHeading">Products</h2>
   <ul className="">
     {products.map((product) => {
 
