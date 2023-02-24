@@ -1,0 +1,28 @@
+To start up app successfully
+
+1. docker compose up --build.
+
+2.npm i (root).
+
+3. cd api.
+
+4. api/   npm i then npm i start.
+
+5. cd client npm i then npm start.
+
+6. db connect and highlight all and execute.
+
+7. check localhost 3000 shows both db data and stripe data.
+
+8. check docker 3x containers are running.
+
+Note: 2 errors in client docker file ignore them 
+
+| Module not found: Error: Can't resolve 'stripe' in '/app/src'
+mvp2-client-1  | ERROR in ./src/StripePricePull.js 8:15-32
+mvp2-client-1  | Module not found: Error: Can't resolve 'stripe' in '/app/src'
+mvp2-client-1  | 
+mvp2-client-1  | ERROR in ./src/StripeProductPull.js 10:15-32
+mvp2-client-1  | Module not found: Error: Can't resolve 'stripe' in '/app/src'
+
+I tried many ways to re-write the curl from stripe for pulling products and price none of them worked so I am using their node.js code which is backend. It still works so ignoring.
