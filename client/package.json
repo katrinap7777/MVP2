@@ -3,23 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@stripe/stripe-js": "^1.47.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "curl-to-fetch": "^1.2.1",
-    "jest": "^27.5.1",
-    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
-    "supertest": "^6.3.3",
+    "tailwindcss": "^3.2.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watchAll --colors --verbose",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,11 +39,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.8.1",
-    "tailwindcss": "^3.2.7"
+    "@babel/eslint-parser": "^7.19.1"
   }
 }

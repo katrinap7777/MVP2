@@ -1,7 +1,7 @@
 import React from "react";
 import Products from "./Products";
 import StripeProductPull from "./StripeProductPull";
-import Header from "./components/Header";
+import Header from "./component/Header";
 
 
 const App = () => {
@@ -50,14 +50,14 @@ const App = () => {
 
 
 return (
-  <>
-  <div className="overflow-hidden">
-  <Header />
-  <Products />
-  <br />
-  <StripeProductPull /> 
-  </div>
-  </>
+    <>
+    <div className="overflow-hidden">
+    <Header />
+    <Products />
+    <br />
+    <StripeProductPull /> 
+    </div>
+    </>
   // <>
 )};
 

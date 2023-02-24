@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StripePricePull from "./StripePricePull";
+// import StripeProduct from "./StripeProduct.json";
 const stripe = require("stripe")(
   "sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8"
 );
@@ -8,7 +9,6 @@ const StripeProductPull = () => {
   const [products, setProducts] = useState([]);
   // const [price, setPrice] = useState([]);
   // const [stripeProducts, setstripeProducts] = useState([]);
-
 
   useEffect(() => {
     const fetchData = async () => {
