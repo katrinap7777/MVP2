@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import Stripe from 'stripe';
+const stripe = new Stripe("sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8");
 
-const stripe = require("stripe")(
-  "sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8"
-);
+
+// const stripe = require("stripe")(
+//   "sk_test_51MeIeBCDSrHORaZXaHh5JNrjHhgQ87hHixYPELgVZk0iesh7brDhdQdUBvipVrGkg6FsUws4JJCqcM5srXChPw3W00Ef5sRcW8"
+// );
 
 const StripePricePull = () => {
   const [prices, setPrices] = useState([]);
@@ -12,6 +15,12 @@ const StripePricePull = () => {
       const price = await stripe.prices.retrieve(
         "price_1MeIfWCDSrHORaZX7lcKvh2S"
       );
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const price = await stripe.prices.retrieve(
+  //       "price_1MeIfWCDSrHORaZX7lcKvh2S"
+  //     );
 
       console.log(price);
       setPrices(price);

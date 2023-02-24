@@ -61,13 +61,15 @@ useEffect(() => {
 //   }) => {
 return (
   <>
-  <h2 className="subHeading">Products</h2>
+  <h2 className="text-[70px] leading-[-.1] font-light mb-4">Products</h2>
   <ul className="">
     {products.map((product) => {
 
       return (
         <div key={product.id}>
-        <li className="" >
+        <div className="border border-[grey] h-[300px] mb-4 relative overflow-hidden">
+          <div className="w-full h-full flex justify-center items-center">
+        <li className="list-none" >
             <div className="img">
               <img
                 src={product.image} 
@@ -77,11 +79,13 @@ return (
               />
             </div>
           <div className="">
-            <h2 className="">{product.title}</h2>
+            <h3 className="">{product.title}</h3>
             <p className="">{product.description}</p>
             <p className="">{product.price}</p>
           </div>
         </li>
+        </div>
+        </div>
         </div>
       );
     })}
