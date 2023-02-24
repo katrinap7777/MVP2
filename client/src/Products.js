@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import cloche from "./image/cloche.png";
-
-
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -11,57 +8,16 @@ useEffect(() => {
   const fetchData = async () => {
     const response = await fetch(`http://localhost:5001/products`);
     const product = await response.json();
-
     setProducts(product);
-
   };
 
     fetchData();
   }, []);
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [price, setPrice] = useState("");
-  // const [image, setImage] = useState("");
-
-// const jsonMsg =
-// {
-//    "message": "Carrot Cake is great"
-// }
-// const product = {
-//   title,
-//   description,
-//   price,
-//   image
-// };
-
-// console.log(products);
-// const handleBtnClick = () => {
-//     fetch(`https://buy.stripe.com/test_eVa3d253o51a5Ww144`, {
-//         method: 'GET',
-//     })
-//     console.log(handleBtnClick);
-//  };
  
 
-// const handleBtnClick = () => {
-//    fetch(`http://localhost:5001/products`, {
-//        method: 'POST',
-//        mode: 'cors',
-//        body: JSON.stringify(product)
-//    })
-//    console.log(handleBtnClick);
-//    console.log(product);
-// };
-// eslint-disable-next-line
-// const Product = ({
-//   title,
-//   description,
-//   price,
-//   image
-//   }) => {
 return (
   <>
-  <h2 className="text-[70px] leading-[-.1] font-light mb-4">Products</h2>
+  <h2 className="text-[70px] leading-[-.1] font-light mb-4">Product</h2>
   <ul className="">
     {products.map((product) => {
 
@@ -73,7 +29,6 @@ return (
             <div className="img">
               <img
                 src={product.image} 
-                // src={`./image/${product.image}`}
                 alt={product.description}
                 className="product-image"
               />
@@ -97,9 +52,6 @@ return (
    
   </ul>
 </>
-// );
-// };
-//    <button onClick={handleBtnClick}>Post Button</button>
 )};
 
 
